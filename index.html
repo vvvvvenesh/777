@@ -3,31 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Sumire</title>
+  <!-- 引入 Font Awesome 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 设置浏览器标签页图标 -->
+  <link rel="icon" href="logo.png" type="image/png">
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
     }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .logo img {
+      height: 50px; /* 根据需要调整Logo高度 */
+      margin-right: 10px;
+    }
+    .navbar .buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .navbar .buttons a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: #555;
+      transition: background-color 0.3s;
+    }
+    .navbar .buttons a:hover {
+      background-color: #777;
+    }
     .container {
-      padding: 20px;
+      padding: 80px 20px 20px; /* 顶部留出空间以避免被导航栏遮挡 */
+      text-align: center;
     }
     img {
-      width: 77%; /* 设置图片宽度为容器宽度的80% */
-      height: auto; /* 高度自动调整，保持比例 */
+      width: 77%;
+      height: auto;
       margin: 10px 0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border-radius: 8px;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto;
     }
     .contact-info {
       background-color: #333;
@@ -44,6 +76,18 @@
   </style>
 </head>
 <body>
+  <!-- 顶部导航栏 -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="公司Logo">
+      <span>Sumire</span>
+    </div>
+    <div class="buttons">
+      <a href="#"><i class="fas fa-home"></i></a>
+      <a href="#"><i class="fas fa-info-circle"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
   <div class="container">
     <img src="tp1.jpg" alt="产品图片1">
     <img src="tp2.png" alt="产品图片2">
@@ -53,9 +97,8 @@
   </div>
   <div class="contact-info">
     <h2>Contact Us</h2>
-    </h2>Add：Via Carlo Rota, 7 F, 20921 Monza MB, Italy</h2>
-    <h2> </h2>
-    </h2>Email：support@sumire.tech</h2>
+    <p>Email：support@sumire.tech</p>
+    <p>Add：Via Carlo Rota, 7 F, 20921 Monza MB, Italy</p>
   </div>
 </body>
 </html>
